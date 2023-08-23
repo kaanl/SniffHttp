@@ -1,6 +1,6 @@
 # SniffHttp
 
-Size, Python programlama dili kullanılarak oluşturduğum özelleştirilmiş bir ağ izleme ve veri yakalama aracını tanıtmaktan mutluluk duyarım. Bu araç, bilgisayar ve ağ arasında geçen trafiği yakalamayı, HTTP isteklerini analiz etmeyi ve bu isteklerin URL, Method ve Path değerlerini hem kullanıcı dostu bir arayüzde görüntülemeyi hem de isteğe bağlı olarak bir metin dosyasına kaydetmeyi sağlar. buradan github sayfamdan indirip kullanabilirsiniz : https://lnkd.in/dDaERVg8
+Size, Python programlama dili kullanılarak oluşturduğum özelleştirilmiş bir ağ izleme ve veri yakalama aracını tanıtmaktan mutluluk duyarım. Bu araç, bilgisayar ve ağ arasında geçen trafiği yakalamayı, HTTP isteklerini analiz etmeyi ve bu isteklerin URL, Method ve Path değerlerini hem kullanıcı dostu bir arayüzde görüntülemeyi hem de isteğe bağlı olarak bir metin dosyasına kaydetmeyi sağlar.
 
 
 Araç Özellikleri:
