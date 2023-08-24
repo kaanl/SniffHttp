@@ -4,6 +4,7 @@ from scapy.all import sniff, IP # scapy kütüphanesinin alt modülü olan sniff
 import argparse #argparse modülünü getirir argparse( kullanıcının girdilerini analiz eder)
 import threading #threading aynı anda birden fazla işi yapmamızı sağlayan modüldür
 from tkinter import filedialog #filedialog dosya seçme ile igili işlemler için kullanılır
+import time
 
 class Application: #application adında bir sınıf oluşturduk
     def __init__(self, root): # init metodu bir sınıfın özelliklerinin başlatılması ve örnek verilerinin atanması için kullanılır
@@ -64,7 +65,10 @@ class Application: #application adında bir sınıf oluşturduk
                 method = packet[http.HTTPRequest].Method.decode("utf-8")
                 request_info = f"Method: {method} URL: {url}{path}"
 
-            output = f"Kaynak IP: {src_ip}  Hedef IP: {dst_ip}  {request_info}\n" # output adlı bir metin oluşturuluyor işlenmiş paket 
+            timestamp = packet.time  # Yakalanan paketin zaman bilgisi
+            time_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(timestamp))  # Zamanı biçimlendirme
+
+            output = f"Time: {time_str} Kaynak IP: {src_ip}  Hedef IP: {dst_ip}  {request_info}\n" # output adlı bir metin oluşturuluyor işlenmiş paket 
             #bilgileri bulunuyor
             self.t1.insert(tk.END, output) #"t1" adlı bir metin kutusu bileşenine "output" metni ekleniyor
             self.t1.see(tk.END)  # Metin sonuna kaydırma.
